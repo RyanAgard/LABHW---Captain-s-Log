@@ -1,5 +1,4 @@
 // const { timeStamp } = require('console')
-const { log } = require('console')
 const mongoose = require('mongoose')
 
 
@@ -15,4 +14,4 @@ const CaptainSchema = new Schema({
 const Captain = mongoose.model('logs', CaptainSchema)
 
 
-module.exports = log
+module.exports = Captain

@@ -6,13 +6,14 @@ const app = express()
 
 connectDB()
 
-const PORT = 8082 
+const PORT = 8080
 
-const captainRoutes = require('./Routes/CaptainRoutes.js')
+const captainRoutes = require('./Routes/CaptainRoutes')
+
 
 const { createEngine } = require('jsx-view-engine')
 
-// const methodOverride = require('method-override')
+const methodOverride = require('method-override')
 
 app.set('view engine', 'jsx')
 
@@ -30,7 +31,8 @@ app.use((req,res,next)=> {
     next()
 })
 
-app.use('/', require('/captain',captainRoutes) )
+app.use('/captain',captainRoutes) 
+
 // // app.use('/pokemons', pokemonsRoutes)
 
 // Listen to the given port

@@ -9,10 +9,16 @@ const captainController = require('../Controllers/CaptainController')
 
 // // Setup an "index" route for pokemonss, attach it to router along with the controller logic
 // router.get('/', pokemonsController.index)
-
+console.log(captainController)
 // Setup a "new" route for creating pokemons
 router.get('/', captainController.index)
 router.get('/new', captainController.new)
+router.delete('/clear', captainController.clear)
+router.delete('/:id', captainController.delete)
+router.put('/:id', captainController.update)
+router.post('/logs/', captainController.seed)
+router.post('/', captainController.create)
+router.get('/:id/edit', captainController.edit)
 router.get('/:id', captainController.show)
 // router.delete('/clear', pokemonsController.delete)
 
@@ -32,6 +38,5 @@ router.get('/:id', captainController.show)
 
 // // Setup an "show" route for pokemonss, attach it to router along with the controller logic
 // router.get('/:id', pokemonsController.show)
-
 
 module.exports = router;

@@ -1,36 +1,26 @@
 import React from 'react'
-import DefaultLayout from '../layouts/DefaultLayout'
 
-function Index(props) {
-    // can't use hooks or state 
-    // can't use event listeners in the same way
+
+function Show(props) {
     return (
-        <DefaultLayout>
-            <div>
-                <h1>Welcome to the Pokemon App!</h1>
-                <ul>
-                    {props.pokemons.map((pokemon, index) => 
-                        <li key={index}>
-                            <a href={`/pokemons/${pokemon._id}`}><strong>{pokemon.name}</strong></a>
-                        </li>
-                    )}
-                </ul>
-                <a href="/pokemons/new">Add...</a>
+        <div>
+            <h1>Show View</h1>
+            <p>The <strong>{props.log.name}</strong> {props.log.shipIsBroken ? 'is ready to sale' : 'is NOT ready to sale'}</p>
+          
+            <a href={`/captain/${props.log._id}/edit`}>Edit</a>
+            
+            <br /><br />
 
-                <br/><br/><br/>
 
-                <form action="/pokemons/seed" method="POST">
-                    <button>SEED</button>
-                </form>
+            <form action={`/captain/${props.log._id}?_method=DELETE`} method="POST">
+                <button>Delete</button>
+            </form>
 
-                <br/>
+            <br />
 
-                <form action="/pokemons/clear?_method=DELETE" method="POST">
-                    <button>CLEAR</button>
-                </form>
-            </div>
-        </DefaultLayout>
+            <a href="/captain">Back</a>
+        </div>
     )
 }
 
-export default Index
+export default Show;
