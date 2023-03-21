@@ -4,6 +4,7 @@ import React from 'react'
 function Index(props) {
     // can't use hooks or state 
     // can't use event listeners in the same way
+
     return (
   
             <div>
@@ -19,15 +20,15 @@ function Index(props) {
 
                 <br/><br/><br/>
 
-                <form action="/" method="POST">
+                <form action="/captain/seed" method="POST">
                     <button>SEED</button>
                 </form>
 
                 <br/>
 
-                {/* <form action="/po/clear?_method=DELETE" method="POST">
+                <form action="/captain/clear?_method=DELETE" method="POST">
                     <button>CLEAR</button>
-                </form> */}
+                </form>
             </div>
     )
 }

@@ -30,7 +30,7 @@ app.use((req,res,next)=> {
     console.log(`${req.method} ${req.path}`)     
     next()
 })
-
+// app.post('/captain',(req,res)=>{console.log(req.body,"Flight")})
 app.use('/captain',captainRoutes) 
 
 // // app.use('/pokemons', pokemonsRoutes)

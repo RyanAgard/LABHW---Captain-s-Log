@@ -4,14 +4,14 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const CaptainSchema = new Schema({
+const captainSchema = new Schema({
     title: {type: String, required: true},
     entry: {type: String, required: true},
-    shipisBroken:{type: Boolean,default: true}
+    shipIsBroken:{type: Boolean}
 },
 {timestamp:true}
 )
-const Captain = mongoose.model('logs', CaptainSchema)
+const Captain = mongoose.model('logs', captainSchema)
 
 
 module.exports = Captain

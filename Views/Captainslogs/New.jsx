@@ -13,10 +13,10 @@ function New() {
               <input type="text" id="clr" name="title" /><br /><br />
 
               <label htmlFor="clr">Entry:</label><br />
-              <input type="text" id="clr" name="entry" /><br /><br />
+              <input type="text" id="ent" name="entry" /><br /><br />
 
-              <label htmlFor="rdy">shipIsBroken:</label>
-              <input type="checkbox" id="rdy" /><br /><br />
+              <label htmlFor="rdy">shipIsBroken:</label><br />
+              <input type="checkbox" id="shipIsBroken" name="shipIsBroken" /><br /><br />
 
               <button>Submit</button>
           </form>

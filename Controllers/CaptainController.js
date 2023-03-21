@@ -35,7 +35,9 @@ module.exports.create = async (req, res) => {
         req.body.shipIsBroken = true
     } else {
         req.body.shipIsBroken = false
+
     }
+    console.log("new")
     try {
         console.log(req.body)
         // use the model to interact with db and create a new document in the log collection
@@ -76,7 +78,7 @@ module.exports.edit = async (req, res) => {
   
     try {
         const log = await Logs.findById(req.params.id)
-        res.render('captain/Edit', { log })
+        res.render('CaptainsLogs/Edit', { log })
     } catch(err) {
         console.log(err)
         res.send(err.message)
@@ -118,7 +120,6 @@ module.exports.seed = async (req, res) => {
 }
 // DELETE /logs/clear
 module.exports.clear = async (req, res) => {
-
     try {
         await Logs.deleteMany({})
         res.redirect('/captain/')

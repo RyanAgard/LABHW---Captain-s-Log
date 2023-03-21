@@ -5,7 +5,7 @@ function Show(props) {
     return (
         <div>
             <h1>Show View</h1>
-            <p>The <strong>{props.log.name}</strong> {props.log.shipIsBroken ? 'is ready to sale' : 'is NOT ready to sale'}</p>
+            <p>The <strong>{props.log.title}</strong> {props.log.shipIsBroken ? 'is ready to sale' : 'is NOT ready to sale'}</p>
           
             <a href={`/captain/${props.log._id}/edit`}>Edit</a>
             
@@ -18,7 +18,7 @@ function Show(props) {
 
             <br />
 
-            <a href="/captain">Back</a>
+            <a href="/captain/">Back</a>
         </div>
     )
 }

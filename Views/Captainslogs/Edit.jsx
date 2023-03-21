@@ -1,17 +1,20 @@
 import React from 'react'
 
 // res.send('<h1></h1>')
-
-function Edit(props) {
+// console.log(props)
+function Edit(props){
     return ( 
         <div>
             <h1>Edit </h1>
-            <form action={`/fruits/${props.log._id}?_method=PUT`} method="POST">
-                <label htmlFor="nme">Name:</label><br />
-                <input type="text" id="nme" name="name" defaultValue={props.log.name} /><br /><br />
+            <form action={`/captain/${props.log._id}?_method=PUT`} method="POST">
+                <label htmlFor="tit"> title:</label><br />
+                <input type="text" id="tit" name="title" defaultValue={props.log.title} /><br /><br />
 
-                <label htmlFor="rdy">Ready To Eat:</label>
-                <input type="checkbox" id="rdy" name="readyToEat" defaultChecked={props.fruit.readyToEat} /><br /><br />
+                <label htmlFor="ent">entry:</label><br />
+                <input type="text" id="ent" name="entry" defaultValue={props.log.entry} /><br /><br />
+
+                <label htmlFor="sib">shipIsBroken:</label>
+                <input type="checkbox" id="shb" name="shipIsBroken" defaultChecked={props.log.shipIsBroken} /><br /><br />
 
                 <button>Submit</button>
             </form>
